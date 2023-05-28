@@ -1,5 +1,5 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { StackNavigationOptions, createStackNavigator } from '@react-navigation/stack';
 import WelcomeScreen from './../screens/Welcome';
 
 type RootStackParamList = {
@@ -7,10 +7,11 @@ type RootStackParamList = {
 }
 
 const Stack = createStackNavigator<RootStackParamList>();
+const screenOptions: StackNavigationOptions = { header: () => <></> };
 
 const routes = () => (
   <NavigationContainer>
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={screenOptions}>
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
     </Stack.Navigator>
   </NavigationContainer>

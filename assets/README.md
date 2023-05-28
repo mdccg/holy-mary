@@ -2,6 +2,10 @@
 
 # Créditos pelas mídias utilizadas
 
+## Fontes tipográficas
+
+- [Inter - Google Fonts](https://fonts.google.com/specimen/Inter)
+
 ## Imagens
 
 - [Free Photo | Still life of crown of thorns](https://www.freepik.com/free-photo/still-life-crown-thorns_25212055.htm#query=jesus&position=4&from_view=search&track=sph)
