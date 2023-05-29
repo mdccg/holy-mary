@@ -23,7 +23,7 @@ Este foi o quinto repositório de código apresentado no [Curso Superior de TSI]
 
 | Papel | Tecnologia |
 |-|-|
-| Prototipagem | Figma |
+| [Prototipagem](https://figma.fun/U3r0LD) | [Figma](https://figma.com/) |
 | Ambiente de execução | [Node](https://nodejs.org/en/) |
 | Plataforma | [Expo](https://expo.dev/) | 
 | Linguagem de programação | [TypeScript](https://www.typescriptlang.org/) |
