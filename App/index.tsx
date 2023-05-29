@@ -1,10 +1,10 @@
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar } from 'expo-status-bar';
 import { useCallback } from 'react';
 import 'react-native-gesture-handler';
-import StatusBarHeight from './../src/components/StatusBarHeight';
+import { ThemeProvider } from 'styled-components/native';
 import Routes from './../src/routes';
+import theme from './../src/stylesheets/theme';
 import { AppWrapper } from './styles';
 
 SplashScreen.preventAutoHideAsync();
@@ -34,9 +34,9 @@ export default function App() {
 
   return (
     <AppWrapper onLayout={onLayoutRootView}>
-      <StatusBar style="auto" />
-      <StatusBarHeight />
-      <Routes />
+      <ThemeProvider theme={theme}>
+        <Routes />
+      </ThemeProvider>
     </AppWrapper>
   );
 }
