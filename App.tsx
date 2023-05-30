@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components/native';
 import Routes from './src/routes';
 import theme from './src/stylesheets/theme';
 import { AppWrapper } from './AppStyles';
+import { UserContextProvider } from './src/context/UserContext';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -35,7 +36,9 @@ export default function App() {
   return (
     <AppWrapper onLayout={onLayoutRootView}>
       <ThemeProvider theme={theme}>
-        <Routes />
+        <UserContextProvider>
+          <Routes />
+        </UserContextProvider>
       </ThemeProvider>
     </AppWrapper>
   );
