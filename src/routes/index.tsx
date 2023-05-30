@@ -6,6 +6,7 @@ import MeetTheTeamScreen from './../screens/MeetTheTeam';
 import MenuScreen from './../screens/Menu';
 import TranslationsScreen from './../screens/Translations';
 import WelcomeScreen from './../screens/Welcome';
+import ChapterSelectorScreen from './../screens/ChapterSelector';
 
 export type RootStackParamList = {
   Welcome: undefined;
@@ -14,6 +15,7 @@ export type RootStackParamList = {
   Bookmarks: undefined;
   Translations: undefined;
   MeetTheTeam: undefined;
+  ChapterSelector: undefined;
 }
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -28,6 +30,7 @@ const routes = () => (
       <Stack.Screen name="Bookmarks" component={BookmarksScreen} />
       <Stack.Screen name="Translations" component={TranslationsScreen} />
       <Stack.Screen name="MeetTheTeam" component={MeetTheTeamScreen} />
+      <Stack.Screen name="ChapterSelector" component={ChapterSelectorScreen} />
     </Stack.Navigator>
   </NavigationContainer>
 );
