@@ -22,7 +22,7 @@ const Menu = ({ navigation }: MenuProps) => {
             icon="book"
             subHeading="Escolha um livro"
             description="Escolha um livro do Antigo ou Novo Testamento para começar."
-            screenName="BookSelection" />
+            screenName="BookSelector" />
             
           <MenuOption
             icon="bookmark"
