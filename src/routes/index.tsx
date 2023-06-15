@@ -8,6 +8,7 @@ import TranslationsScreen from './../screens/Translations';
 import WelcomeScreen from './../screens/Welcome';
 import ChapterSelectorScreen from './../screens/ChapterSelector';
 import BookDTO from './../data-transports/BookDTO';
+import LectureScreen from '../screens/Lecture';
 
 export type RootStackParamList = {
   Welcome: undefined;
@@ -15,6 +16,10 @@ export type RootStackParamList = {
   BookSelector: undefined;
   ChapterSelector: {
     book: BookDTO;
+  };
+  Lecture: {
+    book: BookDTO;
+    chapter: number;
   };
   Bookmarks: undefined;
   Translations: undefined;
@@ -30,10 +35,11 @@ const routes = () => (
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
       <Stack.Screen name="Menu" component={MenuScreen} />
       <Stack.Screen name="BookSelector" component={BookSelectorScreen} />
+      <Stack.Screen name="ChapterSelector" component={ChapterSelectorScreen} />
+      <Stack.Screen name="Lecture" component={LectureScreen} />
       <Stack.Screen name="Bookmarks" component={BookmarksScreen} />
       <Stack.Screen name="Translations" component={TranslationsScreen} />
       <Stack.Screen name="MeetTheTeam" component={MeetTheTeamScreen} />
-      <Stack.Screen name="ChapterSelector" component={ChapterSelectorScreen} />
     </Stack.Navigator>
   </NavigationContainer>
 );
