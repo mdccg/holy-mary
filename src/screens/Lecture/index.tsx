@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import CustomStatusBar from '../../components/CustomStatusBar';
 import BibleService from '../../services/BibleService';
 import ScreenProps from '../../types/ScreenProps';
-import { LectureWrapper, Verses } from './styles';
+import { LectureWrapper, StyledVerse, VerseNumber} from './styles';
 import VerseDTO from '../../data-transports/VerseDTO';
-import { Text } from 'react-native';
+
 
 type LectureProps = ScreenProps<'Lecture'>;
 
@@ -25,11 +25,8 @@ const Lecture = ({
 
   const getChapter = async () => {
     const verses = await bibleService.retrieveVersesByChapter('nvi', book.abbrev.en, chapter);
-    console.log(verses); 
-   
-    setVerses(verses);
-
-    
+       
+    setVerses(verses); 
   }
 
   const [verses, setVerses] = useState<VerseDTO[]>([])
@@ -48,7 +45,12 @@ const Lecture = ({
       <CustomStatusBar />
 
       <LectureWrapper>
-         {verses.map((verse) => <Verses>{verse.text}</Verses>)} 
+         {verses.map((verse) => (
+           <StyledVerse key={verse.number}>
+            <VerseNumber key= {verse.number}> {verse.number} </VerseNumber> 
+            {verse.text}
+            </StyledVerse>
+          ))} 
       </LectureWrapper>
     </>
   );
