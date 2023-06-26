@@ -1,25 +1,13 @@
-import { createContext, ReactNode, useState } from 'react'
+import { createContext, ReactNode, useState } from 'react';
 
 type UserContextType = {
-  book: string;
-  verse: number;
-  chapter: number;
-  translate: string;
-  setBook: (newBook: string) => void;
-  setVerse: (newVerse: number) => void;
-  setChapter: (newChapter: number) => void;
-  setTranslate: (newTranslate: string) => void;
+  translationAbbreviation: string;
+  setTranslationAbbreviation: (newTranslation: string) => void;
 }
 
 const initialValue: UserContextType = {
-  book: '',
-  verse: NaN,
-  chapter: NaN,
-  translate: '',
-  setBook: () => {},
-  setVerse: () => {},
-  setChapter: () => {},
-  setTranslate: () => {},
+  translationAbbreviation: 'acf',
+  setTranslationAbbreviation: () => {},
 };
 
 export const UserContext = createContext<UserContextType>(initialValue);
@@ -29,13 +17,10 @@ type UserContextProps = {
 }
 
 export const UserContextProvider = ({ children }: UserContextProps) => {
-  const [book, setBook] = useState<string>(initialValue.book);
-  const [verse, setVerse] = useState<number>(initialValue.verse);
-  const [chapter, setChapter] = useState<number>(initialValue.chapter);
-  const [translate, setTranslate] = useState<string>(initialValue.translate);
+  const [translationAbbreviation, setTranslationAbbreviation] = useState<string>(initialValue.translationAbbreviation);
 
   return (
-    <UserContext.Provider value={{ book, verse, chapter, translate, setBook, setVerse, setChapter, setTranslate }}>
+    <UserContext.Provider value={{ translationAbbreviation, setTranslationAbbreviation }}>
       {children}
     </UserContext.Provider>
   );

@@ -1,4 +1,4 @@
-import {TOKEN} from '@env';
+import { TOKEN } from '@env';
 import axios, { AxiosInstance } from 'axios';
 import ChapterDTO from './../data-transports/ChapterDTO';
 import VerseDTO from './../data-transports/VerseDTO';
