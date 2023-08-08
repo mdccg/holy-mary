@@ -41,9 +41,9 @@ const Menu = ({ navigation }: MenuProps) => {
             screenName="Translations" />
         </View>
       
-        <MeetTheTeamButton onPress={handlePress}>
+        {/* <MeetTheTeamButton onPress={handlePress}>
           <MeetTheTeamButtonText>Conheça a equipe</MeetTheTeamButtonText>
-        </MeetTheTeamButton>
+        </MeetTheTeamButton> */}
       </MenuWrapper>
     </>
   );

@@ -6,6 +6,7 @@
   - [Sumário](#sumário)
   - [Motivação](#motivação)
   - [Pilha de tecnologia](#pilha-de-tecnologia)
+  - [Galeria](#galeria)
   - [Como rodar](#como-rodar)
     - [Pré-requisitos](#pré-requisitos)
     - [Passo a passo](#passo-a-passo)
@@ -32,7 +33,20 @@ Este foi o quinto repositório de código apresentado no [Curso Superior de TSI]
 
 Os créditos pelas mídias disponibilizadas estão disponíveis [aqui](./assets/README.md).
 
-<!-- Adicionar galeria aqui -->
+## Galeria
+
+![Tela de carregamento](./docs/splash-screen.jpg)
+![Tela de boas-vindas](./docs/welcome.jpg)
+![Menu de opções](./docs/menu.jpg)
+![Seletor de livros](./docs/seletor-livros.jpg)
+![Seletor de capítulos](./docs/seletor-capitulos.jpg)
+![Leitura de Gênesis 19](./docs/leitura-1.jpg)
+![Seleção de um ou mais versículos](./docs/leitura-2.jpg)
+![Mudar a tradução da Bíblia](./docs/traducoes-1.jpg)
+![Descrição da tradução selecionada](./docs/traducoes-2.jpg)
+![Versículos marcados](./docs/marcadores-1.jpg)
+![Versículo marcado para ler depois](./docs/marcadores-2.jpg)
+![Deleção de um ou mais versículos marcados](./docs/marcadores-3.jpg)
 
 ## Como rodar
 

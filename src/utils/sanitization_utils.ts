@@ -4,7 +4,7 @@ import VerseDTO from './../data-transports/VerseDTO';
 type SequenceType = ({ initialVerse: number, finalVerse: number })[];
 
 const sanitize = (value: string): string => (
-  value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim()
+  value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase()
 );
 
 export const isSimilar = (value: string, search: string): boolean => (
